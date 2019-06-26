@@ -12,7 +12,6 @@
   max-height: 812px;
   width: 100vw;
   overflow: hidden;
-  border: 1px solid red;
 }
 
 .panel__header {
@@ -29,12 +28,10 @@
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(white));
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, white 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf000000', endColorstr='#ffffff',GradientType=0 );
-  border: 1px solid green;
 }
 
 .panel__subhead {
   height: 65vh;
-  border: 1px solid blue;
   background: url(/assets/img-1.jpg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -44,7 +41,6 @@
 .panel__footer {
   height: 10vh;
   background-color: rgba(0, 0, 0, 0.68);
-  border: 1px solid blueviolet;
 }
 
 .panel__header--tagline {
@@ -52,6 +48,7 @@
   background: #000000;
   height: 10vh;
   width: 50vw;
+  padding: 2.5vh;
 }
 
 .panel__header--logo {

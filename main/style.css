@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway|Titillium+Web&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +12,9 @@
   height: 100vh;
   max-height: 812px;
   width: 100vw;
-  overflow: hidden;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
 }
 
 .panel__header {
@@ -19,12 +22,10 @@
   display: -ms-flexbox;
   display: flex;
   height: 10vh;
-  text-align: center;
 }
 
 .panel__headline {
   height: 15vh;
-  overflow: hidden;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(white));
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, white 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf000000', endColorstr='#ffffff',GradientType=0 );
@@ -47,8 +48,11 @@
   color: #ffffff;
   background: #000000;
   height: 10vh;
+  line-height: 10vh;
   width: 50vw;
-  padding: 2.5vh;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .panel__header--logo {

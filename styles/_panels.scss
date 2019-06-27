@@ -1,4 +1,6 @@
 .panel {
+  border: 1px solid red;
+
   height: 100vh;
   max-height: 812px;
   width: 100vw;
@@ -9,51 +11,69 @@
     height: 10vh;
   }
   &__headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 15vh;
-    background: -moz-linear-gradient(
-      top,
-      hsla(0, 0%, 0%, 0.75) 0%,
-      hsla(0, 0%, 100%, 1) 100%
-    );
-    background: -webkit-linear-gradient(
-      top,
-      hsla(0, 0%, 0%, 0.75) 0%,
-      hsla(0, 0%, 100%, 1) 100%
-    );
-    background: linear-gradient(
-      to bottom,
-      hsla(0, 0%, 0%, 0.75) 0%,
-      hsla(0, 0%, 100%, 1) 100%
-    );
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf000000', endColorstr='#ffffff',GradientType=0 );
+    @include panel-background-gradient;
   }
   &__subhead {
     height: 65vh;
     background: url(/assets/img-1.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.68);
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
   &__footer {
     height: 10vh;
-    background-color: rgba(0, 0, 0, 0.68);
+    @include panel-background-gradient;
   }
+}
+
+#findDealerBtn,
+#viewUsedCarsBtn {
+  @include panels-font;
+  @include links-btn;
 }
 
 .panel__header {
   &--tagline {
-    color: $company-tagline-color;
-    background: #000000;
+    color: $company-tagline-font-color;
+    background: $company-tagline-background-color;
     height: 10vh;
     line-height: 10vh;
     width: 50vw;
-
     @include company-tagline-font;
   }
   &--logo {
     width: 50vw;
     & img {
       height: 10vh;
+    }
+  }
+}
+
+.panel__subhead {
+  &--list {
+    text-align: justify;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .panel__subhead {
+    background-size: contain;
+    &--list {
+      font-size: 14px;
+      font-weight: 800;
+      width: 50vw;
+      &--wrapper {
+        margin: 0 33vw;
+        width: 100vw;
+      }
     }
   }
 }

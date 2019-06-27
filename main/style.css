@@ -9,12 +9,15 @@
 }
 
 .panel {
+  border: 1px solid red;
   height: 100vh;
   max-height: 812px;
   width: 100vw;
   text-align: center;
   font-family: "Raleway", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
 }
 
 .panel__header {
@@ -25,6 +28,16 @@
 }
 
 .panel__headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 15vh;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(white));
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, white 100%);
@@ -34,14 +47,43 @@
 .panel__subhead {
   height: 65vh;
   background: url(/assets/img-1.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0.68);
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .panel__footer {
   height: 10vh;
-  background-color: rgba(0, 0, 0, 0.68);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(white));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, white 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf000000', endColorstr='#ffffff',GradientType=0 );
+}
+
+#findDealerBtn,
+#viewUsedCarsBtn {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  cursor: pointer;
+  width: 100vw;
+  background-color: black;
+  -webkit-box-shadow: 0 1px 0 white;
+          box-shadow: 0 1px 0 white;
+  color: white;
+  padding: 0.5em;
+  text-transform: uppercase;
+  font-style: italic;
 }
 
 .panel__header--tagline {
@@ -53,6 +95,7 @@
   font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 600;
+  color: #ffffff;
 }
 
 .panel__header--logo {
@@ -61,5 +104,24 @@
 
 .panel__header--logo img {
   height: 10vh;
+}
+
+.panel__subhead--list {
+  text-align: justify;
+}
+
+@media only screen and (orientation: landscape) {
+  .panel__subhead {
+    background-size: contain;
+  }
+  .panel__subhead--list {
+    font-size: 14px;
+    font-weight: 800;
+    width: 50vw;
+  }
+  .panel__subhead--list--wrapper {
+    margin: 0 33vw;
+    width: 100vw;
+  }
 }
 /*# sourceMappingURL=style.css.map */

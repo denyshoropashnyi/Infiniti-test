@@ -1,80 +1,103 @@
 .panel {
-  border: 1px solid red;
-
   height: 100vh;
   max-height: 812px;
   width: 100vw;
   text-align: center;
+
+  //   margin: 5px 0; //delete?
+
   @include panels-font;
   &__header {
     display: flex;
-    height: 10vh;
+    height: 10%;
   }
   &__headline {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 15vh;
+    @include flex-column;
+    height: 15%;
     @include panel-background-gradient;
   }
   &__subhead {
-    height: 65vh;
-    background: url(/assets/img-1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    position: relative;
+    @include flex-column;
+    height: 65%;
+    overflow: hidden;
+
+    // background: url(/assets/img-2.png); //delete?
+    // background-size: cover; //delete?
+    // background-repeat: no-repeat; //delete?
+
     background-color: rgba(0, 0, 0, 0.68);
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    // padding: 0 20px; //delete?
   }
   &__footer {
-    height: 10vh;
-    margin: 2vh 0;
-    @include panel-background-gradient;
+    height: 10%;
+    // @include panel-background-gradient; //delete?
   }
-}
-
-#findDealerBtn,
-#viewUsedCarsBtn {
-  @include panels-font;
-  @include links-btn;
 }
 
 .panel__header {
+  &--logo {
+    width: 50%;
+    & img {
+      height: 100%;
+    }
+  }
   &--tagline {
+    width: 50%;
+    @include company-tagline-font;
+    line-height: 10vh;
     color: $company-tagline-font-color;
     background: $company-tagline-background-color;
-    height: 10vh;
-    line-height: 10vh;
-    width: 50vw;
-    @include company-tagline-font;
-  }
-  &--logo {
-    width: 50vw;
-    & img {
-      height: 10vh;
-    }
   }
 }
+
+.panel__headline {
+  & h2 {
+    font-weight: 400;
+  }
+} //if this needed??
 
 .panel__subhead {
-  &--list {
-    text-align: justify;
-  }
-}
-
-@media only screen and (orientation: landscape) {
-  .panel__subhead {
-    background-size: contain;
-    &--list {
-      font-size: 14px;
-      font-weight: 800;
-      width: 50vw;
-      &--wrapper {
-        margin: 0 33vw;
-        width: 100vw;
+  &--component {
+    &--img {
+      height: 100%;
+      & img {
+        height: 100%;
+        width: 100%;
       }
+    }
+    &--text {
+      position: absolute;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+    &--list {
+      text-align: justify;
+      padding: 0 25px;
     }
   }
 }
+
+.panel__button {
+  &--info {
+    @include panels-font;
+    @include links-btn;
+  }
+  &--buy {
+    @include panels-font;
+    @include buy-btn;
+  }
+}
+
+// @media only screen and (orientation: landscape) {
+//   .panel__subhead {
+//     background-size: contain;
+//     &--list {
+//       font-size: 14px;
+//       font-weight: 800;
+//       width: 50vw;
+//     }
+//   }
+// }

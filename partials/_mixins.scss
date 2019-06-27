@@ -14,7 +14,7 @@
 @mixin links-btn {
   cursor: pointer;
   width: 100vw;
-  background-color: rgba(255, 0, 0, 0.4);
+  background-color: rgba(255, 0, 0, 0.5);
   box-shadow: 0 1px 0 white;
   color: white;
   line-height: 6vh;
@@ -25,7 +25,7 @@
 @mixin buy-btn {
   cursor: pointer;
   width: 100vw;
-  background-color: rgba(0, 128, 0, 0.4);
+  background-color: rgba(0, 128, 0, 0.5);
   box-shadow: 0 1px 0 white;
   color: white;
   line-height: 6vh;

@@ -96,6 +96,7 @@
 .panel__subhead--component--text {
   position: absolute;
   height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -119,7 +120,7 @@
   color: #fff;
   cursor: pointer;
   width: 100vw;
-  background-color: rgba(255, 0, 0, 0.4);
+  background-color: rgba(255, 0, 0, 0.5);
   -webkit-box-shadow: 0 1px 0 white;
           box-shadow: 0 1px 0 white;
   color: white;
@@ -135,12 +136,83 @@
   color: #fff;
   cursor: pointer;
   width: 100vw;
-  background-color: rgba(0, 128, 0, 0.4);
+  background-color: rgba(0, 128, 0, 0.5);
   -webkit-box-shadow: 0 1px 0 white;
           box-shadow: 0 1px 0 white;
   color: white;
   line-height: 6vh;
   text-transform: uppercase;
   font-style: italic;
+}
+
+#fourthPanelFooter {
+  background: gray;
+}
+
+.panel__headline--social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid black;
+}
+
+.panel__headline--social--fb {
+  background: url("/assets/css_sprites.png") no-repeat -51px -10px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid gray;
+  margin: 0 4px;
+}
+
+.panel__headline--social--twitter {
+  background: url("pics/sprite/css_sprites.png") no-repeat -83px -5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid gray;
+  margin: 0 4px;
+}
+
+.panel__headline--social--instagram {
+  background: url("pics/sprite/css_sprites.png") no-repeat -42px -47px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid gray;
+  margin: 0 4px;
+}
+
+#fourthPanelFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(white));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, white 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf000000', endColorstr='#ffffff',GradientType=0 );
+  padding-top: 2px;
+}
+
+.panel__footer--social--fb {
+  background: url("/assets/css_sprites.png") no-repeat -80px -41px;
+  width: 30px;
+  height: 30px;
+  margin: 0 4px;
+}
+
+.panel__footer--social--twitter {
+  background: url("/assets/css_sprites.png") no-repeat -84px -3px;
+  width: 30px;
+  height: 30px;
+  margin: 0 4px;
+}
+
+.panel__footer--social--instagram {
+  background: url("/assets/css_sprites.png") no-repeat -42px -48px;
+  width: 30px;
+  height: 30px;
+  margin: 0 4px;
 }
 /*# sourceMappingURL=style.css.map */

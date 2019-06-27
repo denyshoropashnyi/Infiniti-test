@@ -69,6 +69,7 @@
     &--text {
       position: absolute;
       height: 100%;
+      width: 100%;
       display: flex;
       justify-content: space-around;
       flex-direction: column;
@@ -88,6 +89,66 @@
   &--buy {
     @include panels-font;
     @include buy-btn;
+  }
+}
+
+#fourthPanelFooter {
+  background: gray;
+}
+
+.panel__headline--social {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  &--fb {
+    background: url("/assets/css_sprites.png") no-repeat -51px -10px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid gray;
+    margin: 0 4px;
+  }
+  &--twitter {
+    background: url("pics/sprite/css_sprites.png") no-repeat -83px -5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid gray;
+    margin: 0 4px;
+  }
+  &--instagram {
+    background: url("pics/sprite/css_sprites.png") no-repeat -42px -47px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid gray;
+    margin: 0 4px;
+  }
+}
+
+#fourthPanelFooter {
+  display: flex;
+  justify-content: space-around;
+  @include panel-background-gradient;
+
+  padding-top: 2px;
+}
+
+.panel__footer--social {
+  &--fb {
+    background: url("/assets/css_sprites.png") no-repeat -80px -41px;
+    width: 30px;
+    height: 30px;
+    margin: 0 4px;
+  }
+  &--twitter {
+    background: url("/assets/css_sprites.png") no-repeat -84px -3px;
+    width: 30px;
+    height: 30px;
+    margin: 0 4px;
+  }
+  &--instagram {
+    background: url("/assets/css_sprites.png") no-repeat -42px -48px;
+    width: 30px;
+    height: 30px;
+    margin: 0 4px;
   }
 }
 

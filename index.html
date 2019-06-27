@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="panel__headline">
-                <h2>We have a wide selection of used car offers available</h2>
+                <h1>We have a wide selection of used car offers available</h1>
                 <button id="findDealerBtn" class="panel__button--info">Find your nearest dealer &#x003E;
                     &#x003E;</button>
             </div>
@@ -156,7 +156,34 @@
                 </div>
 
                 <div class="panel__subhead--component--text">
+                    <div class="panel__subhead--component--form">
+                        <form action="#" method="get">
+                            <fieldset class="panel__subhead--component--fieldset">
+                                <p> <input type="text" class="panel__subhead--form--input" minlength="2" maxlength="22"
+                                        placeholder="Your Name" required>
+                                </p>
+                                <p> <input class=panel__subhead--form--input" type="tel" minlength="6" maxlength="18"
+                                        placeholder="Your Phone Number" pattern="[0-9]+" required>
+                                </p>
+                                <p> <input class=panel__subhead--form--input" type="email" minlength="6" maxlength="22"
+                                        placeholder="Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                        required>
+                                </p>
+                                <p> <input type="text" class="panel__subhead--form--input" minlength="3" maxlength="20"
+                                        placeholder="Subject" required>
+                                </p>
+                                <p> <textarea name="request" id="panel__subhead--form--request"
+                                        class="c-footer__form--request" cols="23" rows="3" placeholder="Your Message..."
+                                        required></textarea>
+                                </p>
 
+                                <button class="panel__subhead--form--send" type="submit" name="button">
+                                    Send
+                                </button>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="panel__subhead--component--map"> MAP</div>
                 </div>
             </div>
 

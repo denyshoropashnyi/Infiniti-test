@@ -9,17 +9,17 @@
   @include panels-font;
   &__header {
     display: flex;
-    height: 10vh;
+    height: 10%;
   }
   &__headline {
     @include flex-column;
-    height: 15vh;
+    height: 15%;
     @include panel-background-gradient;
   }
   &__subhead {
     position: relative;
     @include flex-column;
-    height: 65vh;
+    height: 65%;
     overflow: hidden;
 
     // background: url(/assets/img-2.png); //delete?
@@ -30,8 +30,8 @@
     // padding: 0 20px; //delete?
   }
   &__footer {
-    height: 15vh;
-    @include panel-background-gradient; //delete?
+    height: 10%;
+    // @include panel-background-gradient; //delete?
   }
 }
 
@@ -52,14 +52,8 @@
 }
 
 .panel__headline {
-  justify-content: space-between;
-  & h1 {
-    font-weight: 400;
-  }
   & h2 {
     font-weight: 400;
-    line-height: 54px;
-    text-transform: capitalize;
   }
 } //if this needed??
 
@@ -70,24 +64,20 @@
       & img {
         height: 100%;
         width: 100%;
-        opacity: 0.5;
       }
     }
     &--text {
       position: absolute;
       height: 100%;
       width: 100%;
-      @include flex-column;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
     }
     &--list {
-      list-style-type: square;
       text-align: justify;
       padding: 0 25px;
     }
-  }
-  &--heading {
-    text-decoration: underline;
-    text-decoration-style: wavy;
   }
 }
 
@@ -103,40 +93,77 @@
 }
 
 #fourthPanelFooter {
+  background: gray;
+}
+
+.panel__headline--social {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  &--fb {
+    background: url("/assets/css_sprites.png") no-repeat -51px -10px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid gray;
+    margin: 0 4px;
+  }
+  &--twitter {
+    background: url("pics/sprite/css_sprites.png") no-repeat -83px -5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid gray;
+    margin: 0 4px;
+  }
+  &--instagram {
+    background: url("pics/sprite/css_sprites.png") no-repeat -42px -47px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid gray;
+    margin: 0 4px;
+  }
+}
+
+#fourthPanelFooter {
   display: flex;
   justify-content: space-around;
-  height: 9vh;
   @include panel-background-gradient;
-  //   & panel__headline {
-  //     // justify-content: space-around;
-  //   }
 
-  //   padding-top: 2px;
+  padding-top: 2px;
 }
 
 .panel__footer--social {
   &--fb {
     background: url("/assets/css_sprites.png") no-repeat -80px -41px;
-    @include sprite-props;
+    width: 30px;
+    height: 30px;
+    margin: 0 4px;
   }
   &--twitter {
     background: url("/assets/css_sprites.png") no-repeat -84px -3px;
-    @include sprite-props;
+    width: 30px;
+    height: 30px;
+    margin: 0 4px;
   }
   &--instagram {
     background: url("/assets/css_sprites.png") no-repeat -42px -48px;
-    @include sprite-props;
+    width: 30px;
+    height: 30px;
+    margin: 0 4px;
   }
 }
 
 .panel__subhead--component {
   &--form {
+      
     height: 50%;
 
     border: 3px solid red;
   }
   &--fieldset {
-    border: none;
+    height: 32.5vh;
+
+    // border: none;
+    @include flex-column;
   }
 }
 .panel__subhead--component--map {
@@ -144,24 +171,13 @@
   height: 50%;
 }
 
-@media only screen and (orientation: landscape) {
-  .panel__headline h2 {
-    font-weight: 400;
-    line-height: 7.5vh;
-  }
-  .panel__footer--social {
-    &--fb {
-      margin: 3px 0;
-    }
-    &--twitter {
-      margin: 3px 0;
-    }
-    &--instagram {
-      margin: 3px 0;
-    }
-  }
-
-  //   #fourthPanelFooter {
-  //       height: 10vh;
-  //   }
-}
+// @media only screen and (orientation: landscape) {
+//   .panel__subhead {
+//     background-size: contain;
+//     &--list {
+//       font-size: 14px;
+//       font-weight: 800;
+//       width: 50vw;
+//     }
+//   }
+// }

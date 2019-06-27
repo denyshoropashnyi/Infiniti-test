@@ -30,6 +30,7 @@
   }
   &__footer {
     height: 10vh;
+    margin: 2vh 0;
     @include panel-background-gradient;
   }
 }

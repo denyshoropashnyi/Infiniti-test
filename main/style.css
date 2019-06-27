@@ -148,7 +148,6 @@
   cursor: pointer;
   height: 10vh;
   width: 100%;
-  background-color: rgba(255, 0, 0, 0.5);
   -webkit-box-shadow: 0 1px 0 white;
           box-shadow: 0 1px 0 white;
   color: white;
@@ -156,6 +155,9 @@
   text-transform: uppercase;
   font-style: italic;
   border: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(white));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, white 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf000000', endColorstr='#ffffff',GradientType=0 );
 }
 
 .panel__button--buy {
@@ -176,7 +178,25 @@
   border: none;
 }
 
-#fourthPanelFooter {
+#fourthPanel .panel__headline h2 {
+  line-height: 14.4vh;
+}
+
+#fourthPanel .panel__subhead--component--form {
+  height: 50%;
+  border: 3px solid red;
+}
+
+#fourthPanel .panel__subhead--component--fieldset {
+  border: none;
+}
+
+#fourthPanel .panel__subhead--component--map {
+  border: 3px solid blue;
+  height: 50%;
+}
+
+#fourthPanel .panel__footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -188,60 +208,52 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf000000', endColorstr='#ffffff',GradientType=0 );
 }
 
-.panel__footer--social--fb {
+#fourthPanel .panel__footer--social--fb {
   background: url("/assets/css_sprites.png") no-repeat -80px -41px;
   width: 30px;
-  height: 60%;
-  margin: 50% 0px;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  height: 100%;
+  margin: 100% 0px;
+  -webkit-transform: scale(2);
+          transform: scale(2);
 }
 
-.panel__footer--social--twitter {
+#fourthPanel .panel__footer--social--twitter {
   background: url("/assets/css_sprites.png") no-repeat -84px -3px;
   width: 30px;
-  height: 60%;
-  margin: 50% 0px;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  height: 100%;
+  margin: 100% 0px;
+  -webkit-transform: scale(2);
+          transform: scale(2);
 }
 
-.panel__footer--social--instagram {
+#fourthPanel .panel__footer--social--instagram {
   background: url("/assets/css_sprites.png") no-repeat -42px -48px;
   width: 30px;
-  height: 60%;
-  margin: 50% 0px;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-}
-
-.panel__subhead--component--form {
-  height: 50%;
-  border: 3px solid red;
-}
-
-.panel__subhead--component--fieldset {
-  border: none;
-}
-
-.panel__subhead--component--map {
-  border: 1px solid red;
-  height: 50%;
+  height: 100%;
+  margin: 100% 0px;
+  -webkit-transform: scale(2);
+          transform: scale(2);
 }
 
 @media only screen and (orientation: landscape) {
   .panel__headline h2 {
-    font-weight: 400;
     line-height: 7.5vh;
+    font-weight: 400;
   }
-  .panel__footer--social--fb {
-    margin: 3px 0;
+  #fourthPanel .panel__footer--social--fb {
+    margin: 20% 0px;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
-  .panel__footer--social--twitter {
-    margin: 3px 0;
+  #fourthPanel .panel__footer--social--twitter {
+    margin: 20% 0px;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
-  .panel__footer--social--instagram {
-    margin: 3px 0;
+  #fourthPanel .panel__footer--social--instagram {
+    margin: 20% 0px;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -8,6 +8,10 @@
   transition: all 0.2s ease-in-out;
 }
 
+.anchor {
+  height: 100vh;
+}
+
 .panel {
   height: 100vh;
   max-height: 812px;

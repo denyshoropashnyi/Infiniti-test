@@ -1,27 +1,24 @@
 @mixin company-tagline-font {
   font-family: "Titillium Web", sans-serif;
   font-size: 16px;
-  color: #ffffff;
+  color: $company-tagline-font-color;
 }
 
 @mixin panels-font {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #fff;
+  color: $company-tagline-font-color;
 }
 
 @mixin links-btn {
   cursor: pointer;
   height: 10vh;
   width: 100%;
-  // background-color: rgba(255, 0, 0, 0.5);
-  box-shadow: 0 1px 0 white;
-  color: white;
-  line-height: 6vh;
-  text-decoration-color: #000000;
   font-style: italic;
+  line-height: 6vh;
   border: none;
+  box-shadow: 0 1px 0 white;
   @include panel-background-gradient;
 }
 
@@ -29,13 +26,12 @@
   cursor: pointer;
   height: 10vh;
   width: 100%;
-  background-color: rgba(0, 128, 0, 0.5);
-  box-shadow: 0 1px 0 white;
-  color: white;
+  font-style: italic;
   line-height: 6vh;
   text-transform: uppercase;
-  font-style: italic;
   border: none;
+  box-shadow: 0 1px 0 white;
+  background-color: rgba(0, 128, 0, 0.5);
 }
 
 @mixin panel-background-gradient {

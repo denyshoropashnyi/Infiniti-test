@@ -8,6 +8,12 @@
   transition: all 0.2s ease-in-out;
 }
 
+a,
+input,
+btn {
+  cursor: pointer;
+}
+
 .anchor {
   height: 100vh;
 }
@@ -16,12 +22,13 @@
   height: 100vh;
   max-height: 812px;
   width: 100vw;
+  max-width: 1024px;
   text-align: center;
   overflow: hidden;
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #fff;
+  color: #ffffff;
 }
 
 .panel__header {
@@ -48,7 +55,6 @@
 }
 
 .panel__subhead {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,6 +64,7 @@
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  position: relative;
   height: 65vh;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.68);
@@ -115,9 +122,6 @@
 }
 
 .panel__subhead--component--text {
-  position: absolute;
-  height: 100%;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,36 +131,37 @@
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .panel__subhead--component--list {
-  list-style-type: square;
   text-align: justify;
+  list-style-type: square;
   padding: 0 25px;
 }
 
 .panel__subhead--heading {
   text-decoration: underline;
-  -webkit-text-decoration-style: wavy;
-          text-decoration-style: wavy;
+  -webkit-text-decoration-style: double;
+          text-decoration-style: double;
+  text-transform: uppercase;
 }
 
 .panel__button--info {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
   height: 10vh;
   width: 100%;
+  font-style: italic;
+  line-height: 6vh;
+  border: none;
   -webkit-box-shadow: 0 1px 0 white;
           box-shadow: 0 1px 0 white;
-  color: white;
-  line-height: 6vh;
-  -webkit-text-decoration-color: #000000;
-          text-decoration-color: #000000;
-  font-style: italic;
-  border: none;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(white));
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, white 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf000000', endColorstr='#ffffff',GradientType=0 );
@@ -166,18 +171,17 @@
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
   height: 10vh;
   width: 100%;
-  background-color: rgba(0, 128, 0, 0.5);
-  -webkit-box-shadow: 0 1px 0 white;
-          box-shadow: 0 1px 0 white;
-  color: white;
+  font-style: italic;
   line-height: 6vh;
   text-transform: uppercase;
-  font-style: italic;
   border: none;
+  -webkit-box-shadow: 0 1px 0 white;
+          box-shadow: 0 1px 0 white;
+  background-color: rgba(0, 128, 0, 0.5);
 }
 
 #fourthPanel .panel__headline h2 {
@@ -189,10 +193,11 @@
 }
 
 #fourthPanel .panel__subhead--component--fieldset {
-  height: 65vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 65vh;
+  border: none;
 }
 
 #fourthPanel .panel__subhead--component--fieldset input,
@@ -203,29 +208,29 @@
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #fff;
+  color: #ffffff;
   border-radius: 6px;
   margin: 5% 0;
   padding: 0 2%;
-  opacity: 0.6;
+  opacity: 0.8;
   color: #000000;
-  cursor: pointer;
 }
 
 #fourthPanel .panel__subhead--component--fieldset input:focus,
 #fourthPanel .panel__subhead--component--fieldset textarea:focus,
 #fourthPanel .panel__subhead--component--fieldset button:focus {
+  background-color: rgba(0, 0, 139, 0.222);
   opacity: 1;
 }
 
 #fourthPanel .panel__subhead--component--fieldset button {
-  border: none;
-  background-color: #4caf50;
+  background-color: rgba(0, 128, 0, 0.888);
   text-transform: uppercase;
-  color: white;
-  padding: 16px 32px;
   text-decoration: none;
+  color: white;
   margin: 4px 2px;
+  padding: 16px 32px;
+  border: none;
   cursor: pointer;
 }
 

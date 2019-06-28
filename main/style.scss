@@ -5,5 +5,11 @@
   transition: all 0.2s ease-in-out;
 }
 
+a,
+input,
+btn {
+  cursor: pointer;
+}
+
 @import "../partials/partials";
 @import "../styles/panels";

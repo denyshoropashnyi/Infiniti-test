@@ -6,11 +6,9 @@
   height: 100vh;
   max-height: 812px;
   width: 100vw;
+  max-width: 1024px;
   text-align: center;
   overflow: hidden;
-
-  //   margin: 5px 0; //delete?
-
   @include panels-font;
   &__header {
     display: flex;
@@ -22,21 +20,15 @@
     @include panel-background-gradient;
   }
   &__subhead {
-    position: relative;
     @include flex-column;
+    position: relative;
     height: 65vh;
     overflow: hidden;
-
-    // background: url(/assets/img-2.png); //delete?
-    // background-size: cover; //delete?
-    // background-repeat: no-repeat; //delete?
-
     background-color: rgba(0, 0, 0, 0.68);
-    // padding: 0 20px; //delete?
   }
   &__footer {
     height: 15vh;
-    @include panel-background-gradient; //delete?
+    @include panel-background-gradient;
   }
 }
 
@@ -66,7 +58,7 @@
     line-height: 54px;
     text-transform: capitalize;
   }
-} //if this needed??
+}
 
 .panel__subhead {
   &--component {
@@ -79,20 +71,21 @@
       }
     }
     &--text {
+      @include flex-column;
       position: absolute;
       height: 100%;
       width: 100%;
-      @include flex-column;
     }
     &--list {
-      list-style-type: square;
       text-align: justify;
+      list-style-type: square;
       padding: 0 25px;
     }
   }
   &--heading {
     text-decoration: underline;
-    text-decoration-style: wavy;
+    text-decoration-style: double;
+    text-transform: uppercase;
   }
 }
 
@@ -115,9 +108,9 @@
       height: 100%;
     }
     &--fieldset {
-      //   border: none;
-      height: 65vh;
       display: flex;
+      height: 65vh;
+      border: none;
       & input,
       textarea,
       button {
@@ -127,23 +120,21 @@
         border-radius: 6px;
         margin: 5% 0;
         padding: 0 2%;
-        opacity: 0.6;
+        opacity: 0.8;
         color: $form-elements-font-color;
-        cursor: pointer;
-        // background-color: #3CBC8D;
         &:focus {
-          //   background-color: gold;
+          background-color: rgba(0, 0, 139, 0.222);
           opacity: 1;
         }
       }
       & button {
-        border: none;
-        background-color: #4caf50;
+        background-color: rgba(0, 128, 0, 0.888);
         text-transform: uppercase;
-        color: white;
-        padding: 16px 32px;
         text-decoration: none;
+        color: white;
         margin: 4px 2px;
+        padding: 16px 32px;
+        border: none;
         cursor: pointer;
       }
     }

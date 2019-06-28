@@ -44,4 +44,3 @@ buyOnlineQ50Btn.addEventListener('click', goToBuyOnlineQ50Page);
 function goToBuyOnlineQ50Page() {
     window.location = 'https://www.infinitiretailgroup.co.uk/online-deposits/?vehicle=10040992&pre-selected-payment-method=purchase';
 }
-

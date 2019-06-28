@@ -19,7 +19,7 @@
   box-shadow: 0 1px 0 white;
   color: white;
   line-height: 6vh;
-  text-transform: uppercase;
+  text-decoration-color: #000000;
   font-style: italic;
   border: none;
   @include panel-background-gradient;
@@ -68,8 +68,4 @@
   height: 100%;
   margin: 100% 0px;
   transform: scale(2);
-}
-
-.panel {
-  border: 3px solid red;
 }

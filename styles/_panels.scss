@@ -3,6 +3,7 @@
   max-height: 812px;
   width: 100vw;
   text-align: center;
+  overflow: hidden;
 
   //   margin: 5px 0; //delete?
 
@@ -107,16 +108,40 @@
   }
   & .panel__subhead--component {
     &--form {
-      height: 50%;
-
-      border: 3px solid red;
+      height: 100%;
     }
     &--fieldset {
-      border: none;
-    }
-    &--map {
-      border: 3px solid blue;
-      height: 50%;
+      //   border: none;
+      height: 65vh;
+      display: flex;
+      & input,
+      textarea,
+      button {
+        height: 12%;
+        width: 100%;
+        @include panels-font;
+        border-radius: 6px;
+        margin: 5% 0;
+        padding: 0 2%;
+        opacity: 0.6;
+        color: $form-elements-font-color;
+        cursor: pointer;
+        // background-color: #3CBC8D;
+        &:focus {
+          //   background-color: gold;
+          opacity: 1;
+        }
+      }
+      & button {
+        border: none;
+        background-color: #4caf50;
+
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
     }
   }
   & .panel__footer {
@@ -147,22 +172,29 @@
     font-weight: 400;
   }
 
-  #fourthPanel .panel__footer--social {
-    &--fb {
-      margin: 20% 0px;
-      transform: scale(1.5);
+  #fourthPanel {
+    & .panel__subhead--component--fieldset {
+      & input,
+      textarea,
+      button {
+        height: 10%;
+        margin: 2% 0;
+        padding: 0 2%;
+      }
     }
-    &--twitter {
-      margin: 20% 0px;
-      transform: scale(1.5);
-    }
-    &--instagram {
-      margin: 20% 0px;
-      transform: scale(1.5);
+    & .panel__footer--social {
+      &--fb {
+        margin: 20% 0px;
+        transform: scale(1.5);
+      }
+      &--twitter {
+        margin: 20% 0px;
+        transform: scale(1.5);
+      }
+      &--instagram {
+        margin: 20% 0px;
+        transform: scale(1.5);
+      }
     }
   }
 }
-
-//   #fourthPanelFooter {
-//       height: 10vh;
-//   }

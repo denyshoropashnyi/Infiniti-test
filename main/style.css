@@ -9,14 +9,11 @@
 }
 
 .panel {
-  border: 3px solid red;
-}
-
-.panel {
   height: 100vh;
   max-height: 812px;
   width: 100vw;
   text-align: center;
+  overflow: hidden;
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -152,7 +149,8 @@
           box-shadow: 0 1px 0 white;
   color: white;
   line-height: 6vh;
-  text-transform: uppercase;
+  -webkit-text-decoration-color: #000000;
+          text-decoration-color: #000000;
   font-style: italic;
   border: none;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(white));
@@ -183,17 +181,47 @@
 }
 
 #fourthPanel .panel__subhead--component--form {
-  height: 50%;
-  border: 3px solid red;
+  height: 100%;
 }
 
 #fourthPanel .panel__subhead--component--fieldset {
-  border: none;
+  height: 65vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-#fourthPanel .panel__subhead--component--map {
-  border: 3px solid blue;
-  height: 50%;
+#fourthPanel .panel__subhead--component--fieldset input,
+#fourthPanel .panel__subhead--component--fieldset textarea,
+#fourthPanel .panel__subhead--component--fieldset button {
+  height: 12%;
+  width: 100%;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  border-radius: 6px;
+  margin: 5% 0;
+  padding: 0 2%;
+  opacity: 0.6;
+  color: #000000;
+  cursor: pointer;
+}
+
+#fourthPanel .panel__subhead--component--fieldset input:focus,
+#fourthPanel .panel__subhead--component--fieldset textarea:focus,
+#fourthPanel .panel__subhead--component--fieldset button:focus {
+  opacity: 1;
+}
+
+#fourthPanel .panel__subhead--component--fieldset button {
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 #fourthPanel .panel__footer {
@@ -239,6 +267,13 @@
   .panel__headline h2 {
     line-height: 7.5vh;
     font-weight: 400;
+  }
+  #fourthPanel .panel__subhead--component--fieldset input,
+  #fourthPanel .panel__subhead--component--fieldset textarea,
+  #fourthPanel .panel__subhead--component--fieldset button {
+    height: 10%;
+    margin: 2% 0;
+    padding: 0 2%;
   }
   #fourthPanel .panel__footer--social--fb {
     margin: 20% 0px;

@@ -3,6 +3,7 @@
 var anchors = [];
 var currentAnchor = -1;
 var isAnimating = false;
+
 $(function () {
     function updateAnchors() {
         anchors = [];

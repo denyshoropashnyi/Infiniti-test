@@ -10,6 +10,7 @@
   text-align: center;
   overflow: hidden;
   @include panels-font;
+  margin: 0 auto;
   &__header {
     display: flex;
     height: 10vh;
